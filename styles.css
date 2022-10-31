@@ -15,7 +15,7 @@
 
 
 body {
-    background: url(assets/read_news-compressed.jpg) top right;
+    background: #121214 url(assets/read_news-compressed.jpg) top right;
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
@@ -137,7 +137,6 @@ Grande Telas: Acima de 1200px;
 @media screen and (max-width: 768px) {
     body {
         background-image: none;
-        background-color: #121214;
     }
 
     main {
