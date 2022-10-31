@@ -40,10 +40,11 @@ main header img {
     margin: 50px 0px 92px 0px;
 }
 
-main section #paragraph, 
-main section #form-email,
-main section form + p {
+main section #paragraph {
     padding-bottom: 50px;
+} 
+main section #form-email {
+    margin-bottom: 50px;
 }
 
 #paragraph p:nth-child(1){
@@ -136,6 +137,7 @@ Grande Telas: Acima de 1200px;
 @media screen and (max-width: 768px) {
     body {
         background-image: none;
+        background-color: #121214;
     }
 
     main {
