@@ -13,6 +13,9 @@
     --bg-button-color: #8257e5;
 }
 
+html {
+    height: 100vh;
+}
 
 body {
     background: #121214 url(assets/read_news-compressed.jpg) top right;
@@ -147,10 +150,6 @@ Grande Telas: Acima de 1200px;
        display: none;
     }
 
-    main section {
-        background-color: #121214;
-    }
-
     section div#paragraph {
         padding-top: 100px;
     }
@@ -167,7 +166,6 @@ Grande Telas: Acima de 1200px;
     }
     body {
         background-size: cover;
-   
     }
 
     main {
