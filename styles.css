@@ -16,33 +16,34 @@
 
 body {
     background: url(assets/read_news-compressed.jpg) top right;
-    background-size: contain;
+    background-size: cover;
+    background-position: top right;
     background-repeat: no-repeat;
-    height: 100vh;
+    background-attachment: fixed;
+
+    /* Shorthand
+    background: color > image > position > reapeat > size > attachment
+    */
 }
 
 main {
-    width: 52.7%;
-    height: 100%;
+    width: 53%;
+    height: 100vh;
     background-color: var(--body-bg-color);
     font-family: Work Sans, Spartan, sans-serif;
+    padding: 0px 30px;
 }
 
 
 main header img {
     width: 389px;
-    margin: 50px 0px 92px 30px;
+    margin: 50px 0px 92px 0px;
 }
 
 main section #paragraph, 
 main section #form-email,
 main section form + p {
-    margin-left: 36px;
-    margin-bottom: 50px;
-}
-
-#paragraph {
-    margin-right: 36px;
+    padding-bottom: 50px;
 }
 
 #paragraph p:nth-child(1){
@@ -67,9 +68,7 @@ main section form + p {
 }
 
 #form-email {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    width: 59.8vw;
 }
 
 #form-email label {
@@ -80,17 +79,24 @@ main section form + p {
     color: #A8A8A8;
 }
 
-#form-email input#email {
-    width: 59.8vw;
+#form-email div {
+    display: flex;
+    position: relative;
+}
+
+input#email {
+    width: 150%;
     height: 48px;
     border: none;
     border-left: 5px solid #04D361;
     padding: 17px 15px;
     box-shadow: 4px 10px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 5px 6px 0px;
 }
 
-#form-email button {
+button#submit-email {
     background-color: #8257E5;
+    border-radius: 0px 5px 5px 0px;
     border: none;
     width: 48px;
     height: 48px;
@@ -98,9 +104,7 @@ main section form + p {
     align-items: center;
     justify-content: center;
     position: absolute;
-    margin-top: 33px;
-    margin-left: 112.5%;
-
+    right: 0;
 }
 
 main section p {
@@ -117,4 +121,61 @@ main section p a {
 
 main section form + p a:hover {
     text-decoration: underline;
+}
+
+
+/* Pesquisar: O que é Typical Device Breakpoint
+-----------------------------------------
+Pequenas telas: até 600px;
+Celular: de 600px até 768px;
+tablet: 768px até 992px;
+Desktop: 992px até 1200px;
+Grande Telas: Acima de 1200px;
+*/
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    header > img {
+       display: none;
+    }
+
+    main section {
+        background-color: #121214;
+    }
+
+    section div#paragraph {
+        padding-top: 100px;
+    }
+
+    #form-email {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        background-size: cover;
+   
+    }
+
+    main {
+        height: 100vw;
+        position: fixed;
+    }
+
+    section div#paragraph {
+        margin-top: -30px;
+    }
+
 }
